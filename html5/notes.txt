@@ -85,12 +85,22 @@ r33      <a(b>                  <a(b></a(b>                                     
 r34      <a)b>                  <a)b></a)b>                                     r18
 r35      <a_b>                  <a_b></a_b>                                     r18
 r36      <a=b>                  <a=b></a=b>                                     r18
+r37      </!>                   <!--!-->                                        WTF
+r38      <!>                    <!---->                                         converts to comment
+r39      </hacked comment>                                                      completely removed
+r40      </!hacked comment>     <!--!hacked comment-->                          converted to multiline comment
+r41      </!!hacked comment>    <!--!!hacked comment-->                         r40
+r42      <//>                   
+
+
+
+
 
 // starts with special characters in element tag
 
 
 ssc0    <_>                     <_>                                           unchanged
-ssc1    <~>                     
+ssc1    <~>                     <~>                                           unchanged
 <`>
 <!>
 <@>
@@ -132,6 +142,17 @@ b1        ><                     ><                                             
 b2        ><p                    "&gt;"<p <="" body=""></p>                     a2
 b3        ><p>                   "&gt;"<p></p>                                  a3
 b4        ><p>haha               "&gt;"<p>haha</p>                              a4
+
+// haha, valid emoji html
+
+<O_O>
+<o_o>
+<O_o>
+<D_O>
+<d_p>
+<O_^>
+<x_O>
+
 
 
 // from xss video ... injections

@@ -2,14 +2,17 @@ Google chrome html parser forgiveness output testing
 
 Google chrome version 81.0.4044.138 (Official Build) (64-bit)
 
+VIEW THIS DOCUMENT IN WIDE SCREEN OR ZOOMED OUT
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Collective Notes
+NOTES SUMMARIZED
     sample                                                      notes
 * src=<no quotes required>                                      no quotes required for source tag, Chrome loves to replace missing quotes for you…
 * <sCrIpT>                                                      parser lowercases element tag
 * <sCrIpT></scrIpT>                                             case mismatch is just lowercased
-* 
+* >                                                             usually parsed as text
+*
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -60,12 +63,69 @@ r12      <img src=>             <img src(unknown)>                              
 r12      <img src= / /  >       <img src="/">                                   quotes wrapped, removed extra "/"
 r13      <img onerror=alert('xss') src=> <img onerror="alert('xss')" src(unknown)>  immediately threw error triggering alert
 r14      <<img                  "&lt;"<img <="" body="">                        "<" commented, opening body statement injected inbetween
+r15      <<<img                 "&lt;&lt;"<img <="" body="">                    r14
+r16      <img <body>            <img <body>                                     unchanged
+r17      <img <body/>           <img <body>                                     removed "/", perceives as image tag
+r18      <img=body>             <img=body></img=body>                           renders as unique element, automcompletes closing tag
+r19      <img=body>H</img=body> <img=body>H</img=body>                          unchanged
+r20      <a=b=c>                <a=b=c></a=b=c>                                 r18
+r21      <a+b>                  <a+b></a+b>                                     r18
+r22      <a-b>                  <a-b></a-b>                                     r18
+r23      <a*b>                  <a*b></a*b>                                     r18
+r24      <a`b>                  <a`b></a`b>                                     r18
+r25      <a~b>                  <a~b></a~b>                                     r18
+r26      <a!b>                  <a!b></a!b>                                     r18
+r27      <a@b>                  <a@b></a@b>                                     r18
+r28      <a#b>                  <a#b></a#b>                                     r18
+r29      <a$b>                  <a$b></a$b>                                     r18
+r30      <a%b>                  <a%b></a%b>                                     r18
+r31      <a^b>                  <a^b></a^b>                                     r18
+r32      <a&b>                  <a&b></a&b>                                     r18
+r33      <a(b>                  <a(b></a(b>                                     r18
+r34      <a)b>                  <a)b></a)b>                                     r18
+r35      <a_b>                  <a_b></a_b>                                     r18
+r36      <a=b>                  <a=b></a=b>                                     r18
+
+// starts with special characters in element tag
 
 
+ssc0    <_>                     <_>                                           unchanged
+ssc1    <~>                     
+<`>
+<!>
+<@>
+<#>
+<$>
+<%>
+<^>
+<&>
+<*>
+<(>
+<)>
+<->
+<+>
+<=>
+<{>
+<}>
+<[>
+<]>
+<\>
+<|>
+<:>
+<;>
+<'>
+<">
+<,>
+<.>
+</>
+<?>
+
+// starts with special characters in element tag but char is after
 
 
+// special characters mixxed in
 
-
+// ends with special characters
 
 b0        >                      >                                              unchanged
 b1        ><                     ><                                             unchanged

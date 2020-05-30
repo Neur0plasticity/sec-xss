@@ -1,10 +1,7 @@
-Google chrome html parser forgiveness output
+Google chrome html parser forgiveness output testing
 
 Google chrome version 81.0.4044.138 (Official Build) (64-bit)
 
-
-https://hackerone.com/users/password/edit?reset_password_token=xLNxBaMz3REbM8oYZ6L5
-https://hackerone.com/users/password/edit?reset_password_token=xm9SNqYv2ujFzBCWVLkz
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Collective Notes

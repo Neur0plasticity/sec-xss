@@ -12,7 +12,7 @@ NOTES SUMMARIZED
 * <sCrIpT>                                                      parser lowercases element tag
 * <sCrIpT></scrIpT>                                             case mismatch is just lowercased
 * >                                                             usually parsed as text
-*
+* ?,!,//                                                        auto corrected as comments
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -90,52 +90,82 @@ r38      <!>                    <!---->                                         
 r39      </hacked comment>                                                      completely removed
 r40      </!hacked comment>     <!--!hacked comment-->                          converted to multiline comment
 r41      </!!hacked comment>    <!--!!hacked comment-->                         r40
-r42      <//>                   
-
-
-
-
+r42      <//>                   <!--/-->                                        r40
+r43      </>                                                                    r39
 
 // starts with special characters in element tag
 
-
 ssc0    <_>                     <_>                                           unchanged
 ssc1    <~>                     <~>                                           unchanged
-<`>
-<!>
-<@>
-<#>
-<$>
-<%>
-<^>
-<&>
-<*>
-<(>
-<)>
-<->
-<+>
-<=>
-<{>
-<}>
-<[>
-<]>
-<\>
-<|>
-<:>
-<;>
-<'>
-<">
-<,>
-<.>
-</>
-<?>
+ssc2    <`>                     <`>                                           unchanged
+ssc3    <!>                     <!---->                                       r38
+ssc4    <@>                     <@>                                           unchanged
+ssc5    <#>                     <#>                                           unchanged
+ssc5    <$>                     <$>                                           unchanged
+ssc6    <%>                     <%>                                           unchanged                     
+ssc7    <^>                     <^>                                           unchanged
+ssc8    <&>                     <&>                                           unchanged
+ssc9    <*>                     <*>                                           unchanged
+ssc10   <(>                     <(>                                           unchanged 
+ssc11   <)>                     <)>                                           unchanged
+ssc12   <->                     <->                                           unchanged
+ssc13   <+>                     <+>                                           unchanged
+ssc14   <=>                     <=>                                           unchanged
+ssc15   <{>                     <{>                                           unchanged
+ssc16   <}>                     <}>                                           unchanged
+ssc17   <[>                     <[>                                           unchanged
+ssc18   <]>                     <]>                                           unchanged
+ssc19   <\>                     <\>                                           unchanged
+ssc20   <|>                     <\>                                           unchanged
+ssc21   <:>                     <:>                                           unchanged
+ssc22   <;>                     <;>                                           unchanged
+ssc23   <'>                     <'>                                           unchanged
+ssc24   <">                     <">                                           unchanged
+ssc25   <,>                     <,>                                           unchanged
+ssc26   <.>                     <.>                                           unchanged
+ssc27   </>                     </>                                           completely removed
+ssc28   <?>                     <!--?-->                                      multiline comment
 
 // starts with special characters in element tag but char is after
 
+ssca0    <_a>                     <_a>                                           unchanged
+ssca1    <~a>                     <~a>                                           unchanged
+ssca2    <`a>                     <`a>                                           unchanged
+ssca3    <!a>                     <!--a-->                                       r38
+ssca4    <@a>                     <@>                                           unchanged
+ssca5    <#a>                     <#>                                           unchanged
+ssca5    <$a>                     <$>                                           unchanged
+ssca6    <%a>                     <%>                                           unchanged                     
+ssca7    <^a>                     <^>                                           unchanged
+ssca8    <&a>                     <&>                                           unchanged
+ssca9    <*a>                     <*>                                           unchanged
+ssca10   <(a>                     <(>                                           unchanged 
+ssca11   <)a>                     <)>                                           unchanged
+ssca12   <-a>                     <->                                           unchanged
+ssca13   <+a>                     <+>                                           unchanged
+ssca14   <=a>                     <=>                                           unchanged
+ssca15   <{a>                     <{>                                           unchanged
+ssca16   <}a>                     <}>                                           unchanged
+ssca17   <[a>                     <[>                                           unchanged
+ssca18   <]a>                     <]>                                           unchanged
+ssca19   <\a>                     <\>                                           unchanged
+ssca20   <|a>                     <\>                                           unchanged
+ssca21   <:a>                     <:>                                           unchanged
+ssca22   <;a>                     <;>                                           unchanged
+ssca23   <'a>                     <'>                                           unchanged
+ssca24   <"a>                     <">                                           unchanged
+ssca25   <,a>                     <,>                                           unchanged
+ssca26   <.a>                     <.>                                           unchanged
+ssca27   </a>                     </>                                           completely removed
+ssca28   <?a>                     <!--?a-->                                     multiline comment
 
 // special characters mixxed in
 
 // ends with special characters
+
+// how about unmentioned characters hidden from normal keyboard
+
+// slow sampling
 
 b0        >                      >                                              unchanged
 b1        ><                     ><                                             unchanged

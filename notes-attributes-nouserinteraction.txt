@@ -1,0 +1,57 @@
+/*
+copied from https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+*/
+
+attribute               notes
+
+onactivate              fires when element is activated
+onafterprint            fires after page is printed
+onafterscriptexecute    fires after script is executed
+onanimationcancel       fires when a css animation cancels
+onanimationend          fires when a css animation ends
+onanimaitoniteration    fires when a css animation repeats
+onanimationstart        fires when a css animation starts
+onbeforeactivate        fires before the element is activated
+onbeforedeactive        fires before the element is deactivated
+onbeforeprint           fires before the page is printed
+onbeforescriptexecute   fires before script is executed
+onbeforeunload          fires after if the script changes
+onbegin                 fires when a svg animation begins
+onblur                  fires when out of focus
+marquee                 fires when the marquee bounces
+oncanplay               fires if resource can be played
+oncanplaythrough        fires when enough data has been loaded to play the resource all the way through
+ondeactivate            fires when the element is deactivated
+onend                   fires when a svg animation ends
+onended                 fires when the resource is finished playing
+onerror                 fires when the resource fails to load or causes an error
+onfinish                fires when the marquee finishes
+onfocus                 fires when the element has focus
+onfocusin               fires when the element has focus
+onfocusout              fires when an element loses focus
+onhashchange            fires if the hash changes
+onload                  fires when the element is loaded
+onloadeddata            fires when the first frame is loaded
+onloadedmetadata        fires when the meta data is loaded
+onloadend               fires when the element finishes loading
+onloadstart             fires when the element starts loading
+onmessage               fires when message event is received from a postMessage
+onpageshow              fires when the page is shown
+onplay                  fires when the resource is played
+onplaying               fires the resource is playing
+onpopstate              fires when the history changes
+onreadystatechange      fires when the ready state changes
+onrepeat                fires when a svg animation repeats 
+onresize                fires when the window is resized
+onscroll                fires when page scrolls
+onstart                 fires when the marquee starts
+ontimeupdate            fires when the timeline is changed
+ontoggle                fires when the details tag is expanded
+ontransitioncancel      fires when a css transition cancels
+ontransitionend         fires when a css transition ends
+ontransitionrun         fires when a css transition begins
+onunhandledrejection    fires when a promise isn;t handled
+onwaiting               fires when while waiting for the data
+onwebkitanimationend    fires when a CSS animation ends 
+onwebkitanimationstart  fires when a css animation starts
+onwebkittransitionend   fries when a css transistion ends

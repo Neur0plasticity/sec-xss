@@ -1,0 +1,62 @@
+/*
+copied from https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+*/
+
+
+
+attributes                      notes
+
+
+onauxclick                      fires when right clicking or using the middle button of the mouse
+onbeforecopy                    requires you copy a piece of text
+onbeforecut                     requires you cut a piece of text
+onbeforepaste                   requires you cut a piece of text
+onchange                        requires as change of value
+onclick                         requires a click of the element
+oncontextmenu                   triggered when right clicking to show the context menu
+oncopy                          requires you copy a piece of text
+oncut                           requires you cut a piece of text
+ondblclick                      triggered when double clicking the element
+ondrag                          triggered dragging the element
+ondragend                       triggered dragging is finished on the element
+ondragcenter                    requires a mouse drag
+ondragleave                     requires a mouse drag
+ondragover                      triggered dragging over an element
+ondragstart                     requires a mouse drag
+ondrop                          triggered dropping a draggable element
+onfullscreenchange              fires when a video changes full screen status
+oninput                         requires as change of value
+oninvalid                       requires a form submission with an element that does not satisfy it's constraints such as required attributes
+onkeydown                       triggered when a key is pressed
+onkeypress                      triggered when a key is pressed
+onkeyup                         triggered when a key is released
+onmousedown                     triggered when the mouse is pressed
+onmouseenter                    triggered when the mouse is hovered over the element
+onmouseleave                    triggered when the mouse moved away from the element
+onmousemove                     requires mouse movement
+onmouseout                      triggered when the mouse moves away from the element
+onmouseover                     requires a hover over the element
+onmouseup                       triggered when the mouse button is released
+onmozfulscreenchange            fires when a video changes full screen status
+onpaste                         requires paste a piece of text
+onpause                         requires clicking the element to pause
+onpointerdown                   fires when the mouse down
+onpointerenter                  fires when the mouse enter
+onpointerleave                  fires when the mouseleave
+onpointermove                   fires when the pointer moves
+onpointerout                    fires when the mouseout
+onpointerover                   fires when the mouseover
+onpointerrawupdate              fires when the pointer changes
+onpointerup                     fires when the mouse up
+onreset                         requires a click
+onsearch                        requires a click
+onseeked                        requires clicking the element timelime
+onseeking                       requires clicking the element timelime
+onselect                        requires you select text
+onsubmit                        requires a form submission
+ontouchend                      fires when the touch screen, only mobile device
+ontouchmove                     fires when the touch screen and move, only mobile devices
+ontouchstart                    fires when the touch screen, only mobile device
+onunload                        requires a click anywhere on the page and a reload
+onvolumechange                  requires volume adjustment
+onwheel                         fires when you use the mouse wheel

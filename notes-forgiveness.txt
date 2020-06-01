@@ -33,7 +33,7 @@ QUESTIONS UNANSWERED
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 QUESTIONS ANSWERED
 
-* Are multiple bodies allowed? ... no
+* Are multiple body tags allowed? ... no
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 <!DOCTYPE html>
@@ -53,19 +53,19 @@ a3        ><h1>                  "&gt;"<h1></h1>"                               
 a4        ><h1>haha              "&gt;"<h1>haha</h1>                            produces text refered to as $0 in console, auto wraps h1, 
 a5        ><h1>haha<             "&gt;"<h1>haha<</h1>                           extra gt sign, elem tag auto closed
 a6        ><h1>haha</            "&gt;"<h1>haha<!--</body--></h1>"              inserts commented body
-a7        ><h1>haha</h           "&gt;"<h1>haha</h1>                            elem tag auto closed
+a7        ><h1>haha</h           "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
 a8        ><h1>haha</h1          "&gt;"<h1>haha</h1>                            a7
 a9        ><h1>haha</h1>         "&gt;"<h1>haha</h1>                            a8
 
-a7_0      ><h1>haha</a           "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
-a7_1      ><h1>haha</a>          "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
-a7_0_0    <h1>haha</a            <h1>haha</h1>                                  closing tag replaced by start elem
-a7_0_1    <h1>haha</a>           <h1>haha</h1>                                  closing tag replaced by start elem
+a7_0      ><h1>haha</a           "&gt;"<h1>haha</h1>                            a7
+a7_1      ><h1>haha</a>          "&gt;"<h1>haha</h1>                            a7
+a7_0_0    <h1>haha</a            <h1>haha</h1>                                  a7
+a7_0_1    <h1>haha</a>           <h1>haha</h1>                                  a7
 
-a8_0      ><h1>haha</h2          "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
-a8_1      ><h1>haha</h2>         "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
-a8_0      <h1>haha</h2           "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
-a8_0      <h1>haha</h2>          "&gt;"<h1>haha</h1>                            closing tag replaced by start elem
+a8_0      ><h1>haha</h2          "&gt;"<h1>haha</h1>                            a7
+a8_1      ><h1>haha</h2>         "&gt;"<h1>haha</h1>                            a7
+a8_0      <h1>haha</h2           "&gt;"<h1>haha</h1>                            a7
+a8_0      <h1>haha</h2>          "&gt;"<h1>haha</h1>                            a7
 
 // randoms
 r0       haha</h1>              haha                                            deletes closing tag
